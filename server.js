@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const config = require('./config.json');
 const port = 4400;
-const url = `mongodb+srv://${config.mongodb.userName}:${config.mongodb.password}@cluster0.nnsbv.mongodb.net/${config.mongodb.dbName}?retryWrites=true&w=majority`;
+const url = `mongodb+srv://${config.mongodb.userName}:${config.mongodb.password}${config.mongodb.clusterDetails}/${config.mongodb.dbName}?retryWrites=true&w=majority`;
 
 const app = express();
 app.use(cors());
