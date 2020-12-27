@@ -70,11 +70,11 @@ router.post('/', async (req, res) => {
 router.put('/:id', async (req, res) => {
     try {
         const Participant = await participant.findById(req.params.id);
-        participant.team_name = req.body.team_name;
-        participant.wins = req.body.wins;
-        participant.losses = req.body.losses;
-        participant.ties = req.body.ties;
-        participant.score = req.body.score;
+        Participant.team_name = req.body.team_name;
+        Participant.wins = req.body.wins;
+        Participant.losses = req.body.losses;
+        Participant.ties = req.body.ties;
+        Participant.score = req.body.score;
         const team1 = await Participant.save();
         res.json(team1);
     } catch (error) {
