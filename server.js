@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const config = require("./config.json");
-const port = 4400;
+const port = process.env.PORT || 4400;
 const url = `mongodb+srv://${config.mongodb.userName}:${config.mongodb.password}@${config.mongodb.clusterDetails}/${config.mongodb.dbName}?retryWrites=true&w=majority`;
 
 const app = express();
