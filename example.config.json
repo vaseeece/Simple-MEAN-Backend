@@ -1,0 +1,8 @@
+{
+    "mongodb": {
+        "userName": "",
+        "password": "",
+        "clusterDetails": "",
+        "dbName": ""
+    }
+}
